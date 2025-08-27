@@ -1,198 +1,508 @@
 <!DOCTYPE html>
 <html lang="ar" dir="rtl">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>أربعين حديث عن الإمام الجواد عليه السلام</title>
-  <meta name="description" content="جمع وشرح: فاضل الريس — أربعين حديث عن الإمام الجواد عليه السلام">
-  <link href="https://fonts.googleapis.com/css2?family=Amiri:wght@400;700&family=Noto+Naskh+Arabic:wght@400;700&display=swap" rel="stylesheet">
-  <style>
-:root{ --olive:#586b3c; --beige:#d9c8a6; --gold:#c5a572; --offwhite:#faf7f2; --ink:#1b1b1b; }
-*{box-sizing:border-box}
-html,body{margin:0;padding:0;background:var(--offwhite);color:var(--ink)}
-body{font-family:"Noto Naskh Arabic", serif; line-height:1.8}
-.container{max-width:960px;margin:0 auto;padding:16px}
-.site-header{position:sticky;top:0;z-index:10;background:linear-gradient(180deg, var(--beige), #efe6d3);border-bottom:2px solid var(--gold)}
-.header-inner{display:flex;align-items:center;justify-content:space-between;gap:16px}
-.brand h1{font-family:"Amiri", serif;margin:8px 0 0 0;font-weight:700;color:var(--olive)}
-.byline{margin:4px 0 8px 0;color:#6b5e46}
-.nav .nav-link{display:inline-block;padding:10px 16px;border:1px solid var(--gold);border-radius:10px;text-decoration:none;color:var(--ink);background:#fff7}
-.nav .nav-link:hover{background:#fff;border-color:var(--olive)}
-.card{background:#fff;border:1px solid #e6ddcc;border-radius:14px;padding:18px;margin:14px 0;box-shadow:0 2px 10px rgba(0,0,0,.04)}
-.hadith-title{font-family:"Amiri", serif;color:var(--olive);font-size:1.4rem;margin:0 0 6px 0}
-.hadith-text{white-space:pre-wrap;font-size:1.1rem;margin:8px 0}
-.meta{color:#6b5e46;font-size:.95rem}
-.actions{display:flex;gap:10px;flex-wrap:wrap;margin-top:16px}
-button.btn{border:1px solid var(--olive);background:var(--olive);color:white;padding:10px 14px;border-radius:10px;cursor:pointer;font-size:1rem}
-button.btn.secondary{background:#fff;color:var(--olive)}
-button.btn:disabled{opacity:.5;cursor:not-allowed}
-.index-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(240px,1fr));gap:12px}
-.index-item{padding:12px;border:1px dashed var(--beige);border-radius:12px;background:white}
-.index-item h3{margin:0 0 6px 0;font-family:"Amiri",serif;color:var(--olive)}
-.site-footer{border-top:1px solid #eadfcb;background:#fbf8f2;margin-top:24px;padding:10px 0;text-align:center}
-.badge{display:inline-block;background:var(--beige);color:#3f3a2f;padding:2px 8px;border-radius:999px;font-size:.85rem}
-.placeholder{color:#9b8d77}
-@media (max-width:560px){.brand h1{font-size:1.1rem}.hadith-text{font-size:1rem}}
-  </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>تصايم البحرين - تصميم مواقع ويب احترافية</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        /* الأساسيات */
+        :root {
+            --primary: #2c3e50;
+            --secondary: #3498db;
+            --accent: #e74c3c;
+            --light: #ecf0f1;
+            --dark: #2c3e50;
+            --transition: all 0.3s ease;
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        
+        body {
+            background-color: #f9f9f9;
+            color: #333;
+            line-height: 1.6;
+        }
+        
+        .container {
+            width: 90%;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        
+        /* الشريط العلوي */
+        header {
+            background: linear-gradient(135deg, var(--primary) 0%, var(--dark) 100%);
+            color: white;
+            padding: 1rem 0;
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+        }
+        
+        .header-content {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        .logo {
+            font-size: 1.8rem;
+            font-weight: 700;
+            color: white;
+            text-decoration: none;
+            display: flex;
+            align-items: center;
+        }
+        
+        .logo i {
+            margin-left: 10px;
+            color: var(--secondary);
+        }
+        
+        nav ul {
+            display: flex;
+            list-style: none;
+        }
+        
+        nav ul li {
+            margin: 0 15px;
+        }
+        
+        nav ul li a {
+            color: white;
+            text-decoration: none;
+            font-weight: 500;
+            transition: var(--transition);
+            padding: 5px 10px;
+            border-radius: 4px;
+        }
+        
+        nav ul li a:hover {
+            color: var(--secondary);
+            background: rgba(255, 255, 255, 0.1);
+        }
+        
+        /* قسم الهيرو */
+        .hero {
+            padding: 150px 0 100px;
+            background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('https://images.unsplash.com/photo-1467232004584-a241de8bcf5d?ixlib=rb-4.0.3&auto=format&fit=crop&w=1500&q=80');
+            background-size: cover;
+            background-position: center;
+            color: white;
+            text-align: center;
+        }
+        
+        .hero h1 {
+            font-size: 3.5rem;
+            margin-bottom: 20px;
+            animation: fadeInDown 1s ease;
+        }
+        
+        .hero p {
+            font-size: 1.5rem;
+            max-width: 800px;
+            margin: 0 auto 30px;
+            animation: fadeInUp 1s ease;
+        }
+        
+        .btn {
+            display: inline-block;
+            background: var(--secondary);
+            color: white;
+            padding: 12px 30px;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: 600;
+            transition: var(--transition);
+            border: 2px solid var(--secondary);
+            animation: fadeIn 1.5s ease;
+        }
+        
+        .btn:hover {
+            background: transparent;
+            color: var(--secondary);
+            transform: translateY(-3px);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+        }
+        
+        /* قسم الخدمات */
+        .services {
+            padding: 100px 0;
+            background: white;
+        }
+        
+        .section-title {
+            text-align: center;
+            margin-bottom: 60px;
+        }
+        
+        .section-title h2 {
+            font-size: 2.5rem;
+            color: var(--primary);
+            margin-bottom: 20px;
+            position: relative;
+            display: inline-block;
+        }
+        
+        .section-title h2::after {
+            content: '';
+            position: absolute;
+            bottom: -10px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 80px;
+            height: 4px;
+            background: var(--secondary);
+        }
+        
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+        }
+        
+        .service-card {
+            background: var(--light);
+            padding: 30px;
+            border-radius: 10px;
+            text-align: center;
+            transition: var(--transition);
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+        }
+        
+        .service-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+        }
+        
+        .service-card i {
+            font-size: 3rem;
+            color: var(--secondary);
+            margin-bottom: 20px;
+        }
+        
+        .service-card h3 {
+            font-size: 1.5rem;
+            margin-bottom: 15px;
+            color: var(--primary);
+        }
+        
+        /* قسم لماذا نحن */
+        .why-us {
+            padding: 100px 0;
+            background: linear-gradient(135deg, var(--primary) 0%, var(--dark) 100%);
+            color: white;
+        }
+        
+        .why-us .section-title h2 {
+            color: white;
+        }
+        
+        .features {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 30px;
+            margin-top: 50px;
+        }
+        
+        .feature {
+            text-align: center;
+            padding: 20px;
+        }
+        
+        .feature i {
+            font-size: 2.5rem;
+            color: var(--secondary);
+            margin-bottom: 20px;
+        }
+        
+        /* قسم الاتصال */
+        .contact {
+            padding: 100px 0;
+            background: white;
+        }
+        
+        .contact-info {
+            text-align: center;
+            margin-bottom: 50px;
+        }
+        
+        .contact-methods {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 30px;
+        }
+        
+        .contact-method {
+            text-align: center;
+            padding: 30px;
+            background: var(--light);
+            border-radius: 10px;
+            transition: var(--transition);
+        }
+        
+        .contact-method:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+        }
+        
+        .contact-method i {
+            font-size: 2.5rem;
+            color: var(--secondary);
+            margin-bottom: 20px;
+        }
+        
+        /* الفوتر */
+        footer {
+            background: var(--dark);
+            color: white;
+            padding: 50px 0 20px;
+            text-align: center;
+        }
+        
+        .footer-content {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        
+        .social-icons {
+            margin: 20px 0;
+        }
+        
+        .social-icons a {
+            color: white;
+            margin: 0 15px;
+            font-size: 1.5rem;
+            transition: var(--transition);
+        }
+        
+        .social-icons a:hover {
+            color: var(--secondary);
+        }
+        
+        .copyright {
+            margin-top: 20px;
+            padding-top: 20px;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            width: 100%;
+        }
+        
+        /* الرسوم المتحركة */
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+        
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        
+        @keyframes fadeInDown {
+            from {
+                opacity: 0;
+                transform: translateY(-20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        
+        /* التكيف مع الشاشات الصغيرة */
+        @media (max-width: 768px) {
+            .header-content {
+                flex-direction: column;
+            }
+            
+            nav ul {
+                margin-top: 20px;
+                flex-wrap: wrap;
+                justify-content: center;
+            }
+            
+            nav ul li {
+                margin: 5px 10px;
+            }
+            
+            .hero h1 {
+                font-size: 2.5rem;
+            }
+            
+            .hero p {
+                font-size: 1.2rem;
+            }
+        }
+    </style>
 </head>
 <body>
-  <header class="site-header">
-    <div class="container header-inner">
-      <div class="brand">
-        <h1>أربعين حديث عن الإمام الجواد عليه السلام</h1>
-        <p class="byline">جمع وشرح: فاضل الريس <span class="badge">٤٠ حديث</span></p>
-      </div>
-      <nav class="nav">
-        <a href="#/index" class="nav-link">فهرس</a>
-      </nav>
-    </div>
-  </header>
+    <!-- الرأس -->
+    <header>
+        <div class="container header-content">
+            <a href="#" class="logo">
+                <i class="fas fa-paint-brush"></i>
+                تصايم البحرين
+            </a>
+            <nav>
+                <ul>
+                    <li><a href="#">الرئيسية</a></li>
+                    <li><a href="#services">خدماتنا</a></li>
+                    <li><a href="#why-us">لماذا نحن</a></li>
+                    <li><a href="#contact">اتصل بنا</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
 
-  <main id="app" class="container"></main>
+    <!-- قسم البطل -->
+    <section class="hero">
+        <div class="container">
+            <h1>نحو تصاميم استثنائية تلهم العالم</h1>
+            <p>نحن نقدم حلول تصميم مبتكرة وجذابة تعبر عن هوية علامتك التجارية وتترك انطباعًا دائمًا لدى عملائك</p>
+            <a href="#contact" class="btn">اطلب خدمتك الآن</a>
+        </div>
+    </section>
 
-  <footer class="site-footer">
-    <div class="container"><small>© 2025 — لأغراض معرفية فقط</small></div>
-  </footer>
+    <!-- قسم الخدمات -->
+    <section class="services" id="services">
+        <div class="container">
+            <div class="section-title">
+                <h2>خدماتنا</h2>
+            </div>
+            <div class="services-grid">
+                <div class="service-card">
+                    <i class="fas fa-laptop-code"></i>
+                    <h3>تصميم مواقع ويب</h3>
+                    <p>نصمم مواقع ويب احترافية متجاوبة وسريعة، مصممة خصيصًا لتعزيز وجودك الرقمي وتحقيق أهداف عملك.</p>
+                </div>
+                <div class="service-card">
+                    <i class="fas fa-palette"></i>
+                    <h3>تصميم محتوى التواصل الاجتماعي</h3>
+                    <p>نبتكر محتوى مرئي جذاب لوسائل التواصل الاجتماعي لتعزيز تفاعل متابعيك وزيادة وعي العلامة التجارية.</p>
+                </div>
+                <div class="service-card">
+                    <i class="fas fa-chart-line"></i>
+                    <h3>إدارة المواقع والتواصل الاجتماعي</h3>
+                    <p>نقدم خدمات إدارة محترفة لمواقعك ومنصات التواصل الاجتماعي لضمان استمرار نجاح وجودك الرقمي.</p>
+                </div>
+            </div>
+        </div>
+    </section>
 
-<script>
-/* ========= البيانات: الأربعون حديثًا + شروح موجزة ========= */
-const hadiths = [
-  {id:1, text:`قال له رجل: أوصني؟ قال عليه السلام: وتقبل؟ قال: نعم. قال: توسَّد الصَّبر واعتنق الفقر، وارفض الشَّهوات، وخالف الهوى، واعلم أنَّك لن تخلو من عين الله فانظر كيف تكون.`, source:``, explanation:`يوصي بالصبر والزهد ومخالفة الهوى مع دوام المراقبة لله؛ فصلاح الباطن مفتاح صلاح الظاهر.`},
-  {id:2, text:`أوحى الله إلى بعض الأنبياء: أمّا زهدك في الدُّنيا فتعجِّلك الرَّاحة، وأمّا انقطاعك إلي فيعزِّزك بي، ولكن هل عاديت لي عدوًّا وواليت لي وليًّا؟`, source:``, explanation:`الزهد يخفف مؤونة الدنيا، والاعتماد على الله يمنح العزة؛ والولاء والبراءة معيار صدق الانتماء.`},
-  {id:3, text:`روي أنّه حُمل له حمل بزٍّ له قيمة كثيرة، فَسَلَّ في الطريق، فكتب إليه الذي حمله يعرِّفه الخبر، فوقّع بخطِّه: إنَّ أنفسنا وأموالنا من مواهب الله الهنيئة وعواريه المستودعة، يمتع بما متع منها في سرور وغبطة، ويأخذ ما أخذ منها في أجر وحسبة. فمن غلب جزعه على صبره حبط أجره، ونعوذ بالله من ذلك.`, source:``, explanation:`الأنفس والأموال عواري عند الله؛ الصبر عند الفقد يورث الأجر، والجزع يحبط الثواب.`},
-  {id:4, text:`من شهد أمرًا فكرهه كان كمن غاب عنه، ومن غاب عن أمر فرضيه كان كمن شهده.`, source:``, explanation:`الرضا والسخط يساويان الحضور والغياب في الأثر الأخلاقي؛ الموقف القلبي محسوب كالفعلي.`},
-  {id:5, text:`من أصغى إلى ناطق فقد عبده، فإن كان الناطق عن الله فقد عبد الله؛ وإن كان الناطق ينطق عن لسان إبليس فقد عبد إبليس.`, source:``, explanation:`الإصغاء الطائع عبادة للمرجع؛ فإن كان عن الله فطاعة، وإن كان عن الباطل فاتباع لإبليس.`},
-  {id:6, text:`قال له أبو هاشم الجعفريّ يوم تزوَّج أمَّ الفضل ابنة المأمون: يا مولاي لقد عظمت علينا بركة هذا اليوم. فقال عليه السلام: يا أبا هاشم عظمت بركاتُ الله علينا فيه؟ قلت: نعم يا مولاي، فما أقول في اليوم؟ فقال: قل فيه خيرًا فإنّه يُصيبك. قلت: يا مولاي أفعل هذا ولا أخالفه. قال عليه السلام: إذاً ترشد ولا ترى إلاّ خيرًا.`, source:``, explanation:`تفاؤل اليوم بالخير يورث الخير؛ والكلمة الحسنة سبب للهداية ودوام البركة.`},
-  {id:7, text:`وكتب عليه السلام إلى بعض أوليائه: أمّا هذه الدُّنيا فإنّا فيها مغترفون، ولكن من كان هواه هوى صاحبه ودان بدينه فهو معه حيث كان، والآخرة هي دار القرار.`, source:``, explanation:`من وافق أولياء الله في الهوى والدين كان معهم في المنزلة؛ والدنيا ممرّ والآخرة مقرّ.`},
-  {id:8, text:`تأخير التوبة اغترار، وطول التسويف حيرة، والاعتلال على الله هلكة، والإصرار على الذنب أمنٌ لمكر الله، ولا يأمن مكر الله إلاّ القوم الخاسرون.`, source:``, explanation:`تأخير التوبة تسويف مهلك، والاعتلال على الله تضييع، والإصرار أمنٌ كاذب من مكره.`},
-  {id:9, text:`روي أنَّ جمّالًا حمله من المدينة إلى الكوفة فكلَّمه في صلته وقد كان أبو جعفر عليه السلام وصله بأربعمائة دينار، فقال عليه السلام: سبحان الله؛ أما علمت أنَّه لا ينقطع المزيد من الله حتى ينقطع الشكر من العباد.`, source:``, explanation:`الزيادة من الله لا تنقطع ما دام الشكر قائمًا؛ الشكر يجلب المزيد.`},
-  {id:10, text:`إظهار الشيء قبل أن يستحكم مفسدةٌ له.`, source:``, explanation:`تعجيل إظهار الأمور قبل إحكامها يفسدها؛ الإتقان قبل الإعلان.`},
-  {id:11, text:`المؤمن يحتاج إلى توفيقٍ من الله، وواعظٍ من نفسه، وقبولٍ ممّن ينصحه.`, source:``, explanation:`كمال المؤمن بتوفيق من الله، ورقابة النفس، وقبول النصيحة.`},
-  {id:12, text:`روى الشيخ المفيد بإسناده عن عليِّ بن مهزيار، عن بكر بن صالح قال: كتب صهرٌ لي إلى أبي جعفر الثاني صلوات الله عليه: إنَّ أبي ناصبٌ خبيثُ الرأي، وقد لقيتُ منه شدّةً وجهدًا، فرأيك — جعلتُ فداك — في الدعاء لي، وما ترى — جعلتُ فداك —؟ أفترى أن أكاشفه أم أُداريه؟ فكتب عليه السلام: قد فهمت كتابك وما ذكرتَ من أمر أبيك، ولستُ أدع الدعاءَ لك إن شاء الله، والمداراة خيرٌ لك من المكاشفة، ومع العسر يسر، فاصبر فإنَّ العاقبة للمتقين. ثبَّتك الله على ولاية من تولّيت، نحن وأنتم في وديعة الله الذي لا تضيع ودائعه. قال بكر: فعطف الله بقلب أبيه عليه حتى صار لا يخالفه في شيء.`, source:``, explanation:`المداراة مع المسيء أقرب للإصلاح من المكاشفة العنيفة؛ ومع العسر يسرٌ بالصبر.`},
-  {id:13, text:`ملاقاة الإخوان نَشْرةٌ وتلقيحٌ للعقل وإن كان نزرًا قليلًا.`, source:``, explanation:`لقاء الإخوان يُنعش النفس ويُنمي العقل ولو كان يسيرًا.`},
-  {id:14, text:`عن أبي هاشم الجعفري قال: سمعت أبا جعفر عليه السلام يقول: إنّ في الجنّة بابًا يُقال له «المعروف» لا يدخله إلاّ أهل المعروف، فحمدتُ الله في نفسي وفرحتُ بما أتكلفُ من حوائج الناس، فنظر إليَّ عليه السلام فقال: نعم، تمَّ على ما أنت عليه، فإنّ أهل المعروف في دنياهم هم أهل المعروف في الآخرة، جعلك الله منهم يا أبا هاشم ورحمك.`, source:``, explanation:`أهل المعروف في الدنيا هم أهل المعروف في الآخرة؛ فاثبت على قضاء حوائج الناس.`},
-  {id:15, text:`سُئل عن قوله تعالى: «لله الأمر من قبل ومن بعد»، فقال عليه السلام: من قبل أن يأمر، ولله الأمر من بعد أن يأمر بما يشاء. فقلتُ في نفسي: هذا تأويل قوله تعالى: «ألا له الخلق والأمر تبارك الله أحسن الخالقين».`, source:``, explanation:`الأمر لله قبل الأمر وبعده؛ له الخلق والأمر جميعًا، فهو المالك المدبِّر.`},
-  {id:16, text:`من أطاع هواه أعطى عدوَّه مُناه.`, source:``, explanation:`اتباع الهوى تمكين للعدو من مراده؛ قاوم هواك تسلم.`},
-  {id:17, text:`راكب الشهوات لا تُستقال له عثرة.`, source:``, explanation:`من أدمن الشهوات تعثّر ولا تُستقال عثرته؛ الشهوة تورث الزلل.`},
-  {id:18, text:`نعمةٌ لا تُشكر كسيئةٍ لا تُغفر.`, source:``, explanation:`نعمة بلا شكر كخطيئة بلا مغفرة؛ الشكر صون للنعمة.`},
-  {id:19, text:`كيف يضيع من الله كافله، وكيف ينجو من الله طالبه، ومن انقطع إلى غير الله وكّله الله إليه.`, source:``, explanation:`من تولّى الله لا يضيعه، ومن طلب غيره وكله إليه؛ الاعتصام بالله نجاة.`},
-  {id:20, text:`اتَّئِد تُصِبْ أو تَكِدْ.`, source:``, explanation:`التؤدة سبب الإصابة، والعجلة سبب الكدّ والخطأ؛ رويدًا تُصب.`},
+    <!-- قسم لماذا نحن -->
+    <section class="why-us" id="why-us">
+        <div class="container">
+            <div class="section-title">
+                <h2>لماذا تختار تصايم البحرين؟</h2>
+            </div>
+            <div class="features">
+                <div class="feature">
+                    <i class="fas fa-lightbulb"></i>
+                    <h3>تصميم مبتكر</h3>
+                    <p>نقدم أفكارًا إبداعية فريدة تجعل علامتك التجارية مميزة</p>
+                </div>
+                <div class="feature">
+                    <i class="fas fa-clock"></i>
+                    <h3>تسليم في الوقت المحدد</h3>
+                    <p>نلتزم بالمواعيد النهائية ونضمن تسليم مشاريعنا في الوقت المتفق عليه</p>
+                </div>
+                <div class="feature">
+                    <i class="fas fa-headset"></i>
+                    <h3>دعم فني متواصل</h3>
+                    <p>نوفر دعمًا فنيًا مستمرًا لضمان رضاك التام عن خدماتنا</p>
+                </div>
+                <div class="feature">
+                    <i class="fas fa-medal"></i>
+                    <h3>جودة لا تضاهى</h3>
+                    <p>نحرص على تقديم أعلى معايير الجودة في كل مشروع نقوم به</p>
+                </div>
+            </div>
+        </div>
+    </section>
 
-  {id:21, text:`من لم يعرف الموارد أعيته المصادر.`, source:``, explanation:`من جهل الموارد أعجزته المصادر؛ فالعلم بمداخل الأمور ومخارجها مفتاح التدبير.`},
-  {id:22, text:`من انقاد إلى الطمأنينة قبل الخبرة، فقد عرض نفسه للهلكة والعاقبة المتعبة.`, source:``, explanation:`الاطمئنان قبل الخبرة مخاطرة؛ قد يجر تبعات متعبة وهلكة.`},
-  {id:23, text:`من هجر المداراة قاربه المكروه.`, source:``, explanation:`ترك المداراة يجلب المكروه؛ اللين وحسن الخلق يدفعان الشر.`},
-  {id:24, text:`إياك ومصاحبة الشرير فإنه كالسيف المسلول يحسن منظره ويقبح أثره.`, source:``, explanation:`الشرير كالسيف: يَحسُن منظره ويقبُح أثره؛ فاحذر صحبته.`},
-  {id:25, text:`عزّ المؤمن غناه عن الناس.`, source:``, explanation:`عزّ المؤمن في استغنائه عن الناس؛ التعلق بالله يغنيه.`},
-  {id:26, text:`لا يضرّك سخط من رضاه الجور.`, source:``, explanation:`سخط أصحاب الجور لا يضر من استقام؛ الميزان رضا الحق لا رضا الظالم.`},
-  {id:27, text:`كفى بالمرء خيانة أن يكون أمينًا للخونة.`, source:``, explanation:`من ائتمن الخائن خان الأمانة؛ فلا يكن أمينًا للخونة.`},
-  {id:28, text:`من عمل على غير علم ما يفسد أكثر مما يصلح.`, source:``, explanation:`العمل بغير علم يفسد أكثر مما يصلح؛ اطلب العلم قبل العمل.`},
-  {id:29, text:`القصد إلى الله تعالى بالقلوب أبلغ من إتعاب الجوارح بالأعمال.`, source:``, explanation:`توجّه القلب إلى الله أنفع من إرهاق الجوارح بلا حضور؛ الإخلاص روح العمل.`},
-  {id:30, text:`من عتب من غير ارتياب اعتِبَ من غير استعتاب.`, source:``, explanation:`العتب بلا ريبة ظلم؛ ومن ظلم في العتاب لا يُستعطف له العذر.`},
+    <!-- قسم الاتصال -->
+    <section class="contact" id="contact">
+        <div class="container">
+            <div class="section-title">
+                <h2>اتصل بنا</h2>
+            </div>
+            <div class="contact-info">
+                <p>نحن هنا لمساعدتك في تحقيق رؤيتك الإبداعية. تواصل معنا اليوم لمناقشة مشروعك</p>
+            </div>
+            <div class="contact-methods">
+                <div class="contact-method">
+                    <i class="fas fa-phone"></i>
+                    <h3>هاتف / واتساب</h3>
+                    <p>0097333375858</p>
+                </div>
+                <div class="contact-method">
+                    <i class="fas fa-envelope"></i>
+                    <h3>البريد الإلكتروني</h3>
+                    <p>Richadvadv@gmail.com</p>
+                </div>
+                <div class="contact-method">
+                    <i class="fas fa-map-marker-alt"></i>
+                    <h3>العنوان</h3>
+                    <p>البحرين</p>
+                </div>
+            </div>
+        </div>
+    </section>
 
-  {id:31, text:`الثقة بالله ثمنٌ لكلّ غالٍ وسُلَّمٌ إلى كلّ عالٍ.`, source:``, explanation:`الثقة بالله ثمن النفائس وسُلّم المعالي؛ بها تُنال الغايات.`},
-  {id:32, text:`إذا نزل القضاء ضاق الفضاء.`, source:``, explanation:`إذا نزل القضاء ضاق الفضاء؛ فسلّم وارضَ بحكم الله.`},
-  {id:33, text:`غِنى المؤمن غِناه عن الناس.`, source:``, explanation:`غِنى المؤمن الحقيقي استغناؤه عن الناس، لا كثرة ماله.`},
-  {id:34, text:`من لم يرضَ من أخيه بحسن النيّة لم يرضَ بالعطية.`, source:``, explanation:`من لم يرض بالنية الحسنة فلن يرضى بالعطية؛ أصل العلاقة حسن القصد.`},
-  {id:35, text:`قد عاداك من ستر عنك الرشدَ اتباعًا لما تهواه.`, source:``, explanation:`من حجب عنك الرشد متّبعًا هواه فقد عاداك؛ لأن الهداية أعظم نصح.`},
-  {id:36, text:`الحوائج تُطلب بالرَّجاء وهي تنزل بالقضاء، والعافية أحسن عطاء.`, source:``, explanation:`الرجاء سبب قضاء الحوائج، والقضاء ينزل بقدر الله؛ والعافية أعظم عطاء.`},
-  {id:37, text:`لا تُعادِ أحدًا حتى تعرف الذي بينه وبين الله تعالى؛ فإن كان مُحسنًا فإنّه لا يسلّمه إليك، وإن كان مسيئًا فإن علمك به يكفيكَه فلا تُعاده.`, source:``, explanation:`لا تعادِ أحدًا حتى تعرف ما بينه وبين الله؛ فالله يكفيك المحسن والمسيء.`},
-  {id:38, text:`لا تكن وليًّا لله في العلانية، عدوًّا له في السِّرّ.`, source:``, explanation:`لا تُظهر الولاية وتُبطن العداوة؛ الاتساق بين العلانية والسرّ من الإيمان.`},
-  {id:39, text:`التَّحفّظ على قدر الخوف.`, source:``, explanation:`التحفّظ بقدر الخوف؛ فالمروءة بين التوكل والأخذ بالأسباب.`},
-  {id:40, text:`الأيامُ تهتك لك الأمر عن الأسرار الكامنة.`, source:``, explanation:`الأيام تكشف الأسرار؛ فاصبر حتى يتبيّن الأمر.`},
-];
+    <!-- الفوتر -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <a href="#" class="logo">
+                    <i class="fas fa-paint-brush"></i>
+                    تصايم البحرين
+                </a>
+                <div class="social-icons">
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                </div>
+                <div class="copyright">
+                    <p>© 2023 تصايم البحرين. جميع الحقوق محفوظة.</p>
+                </div>
+            </div>
+        </div>
+    </footer>
 
-/* ========= وظائف العرض والتصفّح ========= */
-const fmtNum = (n) => new Intl.NumberFormat('ar-EG').format(n);
-const App = { data: hadiths, current: 1 };
-
-function router(){
-  const saved = localStorage.getItem('lastHadith');
-  const def = saved ? `#/hadith/${saved}` : '#/hadith/1';
-  const hash = location.hash || def;
-  const [ , route, param ] = hash.split('/');
-  if(route==='index') renderIndex();
-  else if(route==='hadith') renderHadith(parseInt(param||'1',10));
-  else renderHadith(1);
-}
-
-function renderIndex(){
-  const app = document.getElementById('app');
-  const saved = localStorage.getItem('lastHadith');
-  const last = saved ? parseInt(saved,10) : 1;
-
-  const searchBox = `
-    <div class="card" style="margin-bottom:12px">
-      <label for="q"><strong>🔎 بحث:</strong></label>
-      <input id="q" type="text" placeholder="ابحث في النص/الشرح/الرقم..." style="width:100%;padding:10px;border:1px solid #d9c8a6;border-radius:10px;margin-top:6px" />
-      <div class="actions" style="margin-top:10px">
-        <button class="btn" onclick="location.hash='#/hadith/${last}'">متابعة القراءة (آخر حديث: ${fmtNum(last)})</button>
-        <button class="btn secondary" onclick="(document.getElementById('q').value=''); filterIndex('')">مسح البحث</button>
-      </div>
-    </div>`;
-
-  const items = App.data.map(h => {
-    const title = `الحديث ${fmtNum(h.id)}`;
-    const snippet = (h.text || '').slice(0, 80);
-    return `
-      <div class="index-item" data-number="${h.id}" data-text="${(h.text||'').replace(/\"/g,'&quot;')}" data-expl="${(h.explanation||'').replace(/\"/g,'&quot;')}">
-        <h3>${title}</h3>
-        <p class="meta">${snippet}...</p>
-        <button class="btn" onclick="location.hash='#/hadith/${h.id}'">فتح</button>
-      </div>`;
-  }).join('');
-
-  app.innerHTML = `
-    ${searchBox}
-    <div class="card">
-      <h2 class="hadith-title">فهرس الأحاديث (${fmtNum(App.data.length)})</h2>
-      <div class="index-grid" id="indexGrid">${items}</div>
-    </div>`;
-  document.getElementById('q').addEventListener('input',(e)=>filterIndex(e.target.value));
-  scrollTo(0,0);
-}
-
-function filterIndex(query){
-  const grid = document.getElementById('indexGrid');
-  const q = (query||'').trim();
-  for(const item of grid.children){
-    const num = item.getAttribute('data-number');
-    const t = item.getAttribute('data-text')||'';
-    const e = item.getAttribute('data-expl')||'';
-    const hay = `${num} ${t} ${e}`;
-    item.style.display = (!q || hay.includes(q)) ? '' : 'none';
-  }
-}
-
-function renderHadith(n){
-  n = Math.max(1, Math.min(n, App.data.length));
-  App.current = n;
-  try{ localStorage.setItem('lastHadith', String(n)); }catch(_){}
-  const h = App.data[n-1];
-  const app = document.getElementById('app');
-
-  const src = (h.source && h.source.trim()) ? h.source.trim() : '<span class="placeholder">— غير مذكور —</span>';
-  const expl = (h.explanation && h.explanation.trim()) ? h.explanation.trim() : '<span class="placeholder">— سيضاف لاحقًا —</span>';
-
-  app.innerHTML = `
-    <article class="card">
-      <h2 class="hadith-title">الحديث ${fmtNum(h.id)}</h2>
-      <div class="hadith-text">${h.text}</div>
-      <div class="card" style="background:#fff9; border-color:#eadfcb">
-        <strong>شرح الحديث</strong>
-        <p class="hadith-text">${expl}</p>
-      </div>
-      <p class="meta"><span class="badge">المصدر</span> ${src}</p>
-      <div class="actions">
-        <button class="btn secondary" onclick="location.hash='#/index'">فهرس</button>
-        <button class="btn" onclick="location.hash='#/hadith/${n-1}'" ${n<=1?'disabled':''}>السابق</button>
-        <button class="btn" onclick="location.hash='#/hadith/${n+1}'" ${n>=App.data.length?'disabled':''}>التالي</button>
-      </div>
-    </article>`;
-  scrollTo(0,0);
-}
-
-window.addEventListener('hashchange',router);
-window.addEventListener('load',router);
-</script>
+    <script>
+        // تأثير التمرير السلس للروابط
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                
+                const targetId = this.getAttribute('href');
+                if (targetId === '#') return;
+                
+                const targetElement = document.querySelector(targetId);
+                if (targetElement) {
+                    window.scrollTo({
+                        top: targetElement.offsetTop - 80,
+                        behavior: 'smooth'
+                    });
+                }
+            });
+        });
+    </script>
 </body>
 </html>
